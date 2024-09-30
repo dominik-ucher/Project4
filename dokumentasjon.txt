@@ -1,0 +1,33 @@
+Dokumentasjon
+
+1. Hvordan appen funker
+- Når du kjører appen åpner du Hotell booking vindu for en bruker og en admin. 
+- Første tab heter booking. Den brukes til å selektere antall personer som skal sove der.
+Videre skriver du startdato og sluttdato du har lyst å booke den på. Når du klikker på search så kommer det opp alle ledige hotellrom 
+for de datoene. Til slutt skriver du hvilke hotellrom nr du har lyst å booke også booker du den.
+- Andre tab så er det register admin. Der kan du registrere en ny admin person ved å skrive et brukernavn, passord og adminkode for 
+å få valid registrering.
+- Tredje tab heter admin. Etter en admin logger seg inn med en valid brukernavn og passord så logger du inn og får en oversikt over
+alle booking som har blitt gjort. I tillegg kan du legge til flere hotellrom i selve hotellet.
+
+2. Forklaring av objektene
+- Admin objektet er bare vanlig getters og setters til admin for å sjekke at den er valid.
+- AdminRegister objektet brukes til å regidter et nytt admin bruker, vanlig med getters, setters og sjekker i dokumentet adminuser.txt hvis ikke
+den brukeren finnes fra før av. I tillegg hvis adminkoden stemmer eller ikke. Hvis ikke så kommer det feilmeldinger.
+- App.fxml filen er fxml filen til appen. Brukte Scenebuilder
+- Bestilling objektet legger til nye bestillinger i bestilling.txt filen. 
+- Hotell objektet sjekker og får fra de ledige hotellrommene på valgte datoene. Den tar inn rom.txt og bestillinger.txt og lager en liste 
+over alle disse. Videre så iterer den gjennom listene med datene og romnr og lager en ny lister over ledige rom.
+-HotellBookingSystemApp objektet brukes til å starte opp programmet
+- HotellBookingSystemController objektet er controller til appen
+- Innlogging objektet sjekker hviis det er gydlig innlogging til appen.
+- Rom objektet er objektet for Rom med getters og setters
+- ToDo objektet er objektet som lager lister av rom og bestillinger i HotellBookingSystemController
+
+3. Forklaring av tekstene
+- BestillingTest sjekker hvis bestillingen blir lagt til å filen. Så sletter den testen fra txt filen. 
+- InnloggingTest kjører to tester hvor den ene er en valig innlogging hvor det skal gå gjennom og den andre er en invalig innlogging
+hvor det skal komme en feilmeldinger
+- RegisterAdmin kjører to tester hvor den ene er en valig register hvor det skal gå gjennom og den andre er en invalid
+register hvor det skal komme feilmeldinger
+- RomTest sjekker hvis det er et gydlig rom og skal legge det til filen. Så skal det slette rommet fra filen. 

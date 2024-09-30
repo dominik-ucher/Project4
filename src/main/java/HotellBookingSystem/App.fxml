@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HotellBookingSystem.HotellBookingSystemController">
+  <tabs>
+    <Tab text="Booking">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ChoiceBox fx:id="AntallValg" layoutX="14.0" layoutY="14.0" prefWidth="150.0" />
+                  <DatePicker fx:id="startdato" layoutX="171.0" layoutY="14.0" promptText="Start Date" />
+                  <DatePicker fx:id="endedato" layoutX="353.0" layoutY="15.0" promptText="End Date" />
+                  <Button fx:id="searchrom" layoutX="539.0" layoutY="12.0" mnemonicParsing="false" onAction="#handlebookingsearchButtonClick" text="Search" />
+                  <TextField fx:id="romnr" layoutX="368.0" layoutY="159.0" promptText="Rom Number" />
+                  <Button fx:id="bookrom" layoutX="418.0" layoutY="210.0" mnemonicParsing="false" onAction="#handlebookingClick" text="Book" />
+                  <Label fx:id="rombooked" layoutX="428.0" layoutY="269.0" text="Label" />
+                  <ListView fx:id="ledigrom" layoutX="64.0" layoutY="99.0" prefHeight="200.0" prefWidth="200.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Register Admin">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="registeradminusername" layoutX="226.0" layoutY="44.0" promptText="Username" />
+                  <TextField fx:id="registeradminpassword" layoutX="226.0" layoutY="104.0" promptText="Password" />
+                  <PasswordField fx:id="admincodepassword" layoutX="226.0" layoutY="160.0" promptText="Admin Code" />
+                  <Button fx:id="registerAdmin" layoutX="275.0" layoutY="214.0" mnemonicParsing="false" onAction="#handleadminregisterButtonClick" text="Register" />
+                  <Label fx:id="registerResult" layoutX="286.0" layoutY="275.0" text="Label" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Admin">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="adminusername" layoutX="31.0" layoutY="35.0" promptText="Username" />
+                  <PasswordField fx:id="adminpassword" layoutX="226.0" layoutY="35.0" promptText="Password" />
+                  <Button fx:id="adminlogin" layoutX="437.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleadminLogin" text="Log In" />
+                  <Label fx:id="InnloggingResult" layoutX="31.0" layoutY="79.0" text="Label" />
+                  <ListView fx:id="bestiltrom" layoutX="31.0" layoutY="116.0" prefHeight="200.0" prefWidth="200.0" />
+                  <TextField fx:id = "newregisterrom" layoutX="363.0" layoutY="104.0" promptText="Rom Number" />
+                  <TextField fx:id = "newregisterperson" layoutX="363.0" layoutY="159.0" promptText="Persons" />
+                  <Button fx:id = "registernewrom" onAction = "#handlenewrom" layoutX="390.0" layoutY="216.0" mnemonicParsing="false" text="Register Room" />
+                  <Label fx:id = "newromregistered" layoutX="425.0" layoutY="287.0" text="Label" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
